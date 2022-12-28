@@ -17,9 +17,10 @@
 */
 
 const animals = ['macaco', 'tucano', 'elefante', 'pavão', 'hipopótamo']
+const notLion = !animals.includes('leão')
 
 /*for(let i = 0; i<animals.length; i++){
-    if(!animals.includes('leão')){
+    if(notLion){
         console.log('Leão não existe no array animals.')
     }else {
         console.log('Existe um leão no array animals.')
@@ -87,12 +88,17 @@ let booleanAmount = 0
 const fourString = []
 let arrayIncr = 0
 
+
 for(let i = 0; i<=randomValues.length; i++){
+    const typeOfRandom = typeof randomValues[i]
+    const typeOfString = typeOfRandom === 'string'
+    const typeOfBoolean = typeOfRandom === 'boolean'
     arrayIncr++
-    if(typeof randomValues[i] === 'string'){
+
+    if(typeOfString){
         fourString.push(randomValues[i])
         stringAmount++
-    }else if(typeof randomValues[i] === 'boolean'){
+    }else if(typeOfBoolean){
         booleanAmount++
     }else if(stringAmount >= 4){
         break
