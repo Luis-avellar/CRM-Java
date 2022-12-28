@@ -24,13 +24,14 @@
 */
 
 /*const fruits = ['morango', 'banana', 'mamão']
-if(fruits.length === 'abacaxi'){
+if(fruits.includes('abacaxi')){
     console.log('A string "abacaxi existe no array, fruits.')
-} else if(fruits.length === 'pera'){
+} else if(fruits.includes('pera')){
     console.log('A string "pera" existe no array fruits.')
 } else {
     console.log('Nem a string "pera" e nem a string "abacaxi" existem dentro do array fruits')
-}*/
+}
+R: Minha lógica estava certa porém a sintaxe estava errada. */
 
 /*
   02
@@ -45,15 +46,19 @@ if(fruits.length === 'abacaxi'){
   lógico precisam ter a constante especificada. Exemplo: hour > x && hour < y.
 */
 /*const horaAtual = 10
-if(horaAtual >=6 && horaAtual < 12){
+const eManha = horaAtual >=6 && horaAtual < 12
+const deTarde = horaAtual >= 12 && horaAtual < 18
+const deNoite = horaAtual >= 18 && horaAtual <= 23
+if(eManha){
     console.log('Bom dia!')
-} else if(horaAtual >= 12 && horaAtual < 18){
+} else if(deTarde){
     console.log('Boa tarde!')
-} else if(horaAtual >= 18 && horaAtual < 24){
+} else if(deNoite){
     console.log('Boa noite!')
 } else{
     console.log('Você já passou da hora de descansar.')
 }*/
+//R: CORRETO!
 /*
   03
 
@@ -68,13 +73,16 @@ if(horaAtual >=6 && horaAtual < 12){
     também está funcionando.
 */
 /*const minhaIdadeAtual = 32
-let ingressoEntrada = ''
-if(minhaIdadeAtual <=7 || minhaIdadeAtual >=65){
+let ingressoEntrada = null
+const kid = minhaIdadeAtual <= 7
+const older = minhaIdadeAtual >= 65
+if(kid || older){
     ingressoEntrada = 'Para você, a entrada é grátis!'
 }else {
     ingressoEntrada = 'A entrada é R$ 30,00.'
 }
-console.log(ingressoEntrada)*/
+console.log(ingressoEntrada)
+R: CORRETO! */
 /*
   04
 
@@ -85,6 +93,16 @@ console.log(ingressoEntrada)*/
 */
 
 const numbers = [7, 92, 34, 46, 90, 25, 11, 3, 89, 76, 99]
+let onzeEnoventa = []
+
+/*for(let i=0;i<numbers.length;i++){
+  const number = numbers[i]
+  const eOnzeEnoventa = number >= 11 && number <=90
+  if(eOnzeEnoventa){
+    onzeEnoventa.push(numbers[i])
+  }
+}
+console.log(onzeEnoventa)*/
 
 
 /*
@@ -97,10 +115,27 @@ const numbers = [7, 92, 34, 46, 90, 25, 11, 3, 89, 76, 99]
   - Gere essas informações à partir de um for loop;
   - Exiba a frase no console.
 
-  "O crazyArray tem X booleans, X números e X strings."
+  ""
 */
 
 const crazyArray = [true, 869, 'oi', 71, false, 83, '35', true, 397, 'js', false]
+let numberAmount = null
+let booleanAmount = null
+let stringAmount = null
+
+/*for(let i=0;i<crazyArray.length;i++){
+  const typeofAmount = typeof crazyArray[i]
+  const isNumber =  typeofAmount === 'number'
+  const  isBoolean = typeofAmount === 'boolean'
+  if(isNumber){
+    numberAmount++
+  }else if(isBoolean){
+    booleanAmount++
+  }else {
+    stringAmount++
+  }
+}
+console.log(`O crazyArray tem ${booleanAmount} booleans, ${numberAmount} números e ${stringAmount} strings.`)*/
 
 /*
   06
@@ -123,11 +158,15 @@ const randomNumbers = [73, 4, 67, 10, 31, 58]
 let numbersPar = []
 let numbersImp = []
 
-for(let i=0;i<randomNumbers.length;i++){
-    if(randomNumbers[i]%2==0){
-         numbersPar = randomNumbers.push(randomNumbers[i])
+/*for(let i=0;i<randomNumbers.length;i++){
+  const number = randomNumbers[i]
+  const isNumber = number % 2 === 0
+    if(isNumber){
+         numbersPar.push(number)
     }else {
-         numbersImp = randomNumbers[i]
+         numbersImp.push(number)
     }
 }
-console.log(numbersPar)
+const numbersParString = numbersPar.join(', ').replace(', 5', ' e 5')
+const numbersImpString = numbersImp.join(', ').replace(', 3', ' e 3')
+console.log(`Numeros ímpares: ${numbersParString} Números pares: ${numbersImpString}`)*/
