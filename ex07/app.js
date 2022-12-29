@@ -58,12 +58,13 @@ for(let i=0; i<randomNumbers.length; i++){
 */
 
 const sentence = ['A', 'certeza', 'dúvida', 'é', 'o', 'princípio', 'da', 'sabedoria.']
-let newSentence = null
+let newSentence = ''
 for(let i=0; i<sentence.length; i++){
-    if(sentence[i].includes('certeza')){
-        sentence[i].replace('certeza', ' ')
+  const word = sentence[i]
+    if(word === 'certeza'){
+        continue
     }
-    newSentence = sentence.join(' ')
+    newSentence += `${word} `
 }
 //console.log(newSentence)
 
@@ -90,24 +91,25 @@ let arrayIncr = 0
 
 
 for(let i = 0; i<=randomValues.length; i++){
-    const typeOfRandom = typeof randomValues[i]
+    const item = randomValues[i]
+    const typeOfRandom = typeof item
     const typeOfString = typeOfRandom === 'string'
     const typeOfBoolean = typeOfRandom === 'boolean'
-    arrayIncr++
 
     if(typeOfString){
-        fourString.push(randomValues[i])
+        fourString.push(item)
         stringAmount++
     }else if(typeOfBoolean){
         booleanAmount++
-    }else if(stringAmount >= 4){
+    }else if(stringAmount === 4){
         break
     }
+    arrayIncr++
 }
 /*console.log(` 3 informações sobre o array randomValues:
-- As primeiras 4 strings são ${fourString[0]}, ${fourString[1]}, ${fourString[2]} e ${fourString[3]};
-- Até que as primeiras 4 strings fossem iteradas, ${booleanAmount} booleans foram iterados;
-- O array foi iterado por ${arrayIncr} vezes.`)*/
+ - As primeiras 4 strings são ${fourString[0]}, ${fourString[1]}, ${fourString[2]} e ${fourString[3]};
+ - Até que as primeiras 4 strings fossem iteradas, ${booleanAmount} booleans foram iterados;
+ - O array foi iterado por ${arrayIncr} vezes.`)*/
 /*
   06
 
