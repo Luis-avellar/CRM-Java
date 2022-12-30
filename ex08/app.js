@@ -10,6 +10,7 @@ function firstFunc (firstNumber = 0, secondNumber = 0){
     return firstNumber * secondNumber
 }
 const multiNumber = firstFunc(4, 9)
+//console.log(firstFunc(4,9)) Também é possível
 //console.log(multiNumber)
 /*
   02
@@ -54,13 +55,25 @@ const fourthFunc = function (j = 0){
   - Exiba o novo array no console, sem inserir um console.log() dentro da  
     função.
 */
-function millennialUpperCase (crazyArray = []){
+/*function millennialUpperCase (crazyArray = []){
     return crazyArray.join(', ').toUpperCase()
     
-}
+}*/
 const millennialWords = ['lol', 'yolo', 'troll', 'stalkear', 'selfie', 'influencer', 'crush', 'fitness', 'hater', 'bae', 'random', 'kawaii', 'outfit', 'mood', 'fail']
-const newArray = millennialUpperCase(millennialWords)
-//console.log(newArray)
+//const newArray = millennialUpperCase(millennialWords)
+//console.log(newArray) ERRADO!
+
+ function millennialUpperCase (crazyArray = []){
+  let newArray = []
+  for(let i=0; i<crazyArray.length; i++){
+    newArray.push(crazyArray[i].toUpperCase())
+
+  }
+  return newArray
+}
+
+//console.log(millennialUpperCase(millennialWords))
+
 /*
   05
 
@@ -80,16 +93,17 @@ let numbersAmount = 0
 function positive (positiveNumbers = []){
     for(let i=0; i<positiveNumbers.length; i++){
         
-        if(positiveNumbers.includes(positiveNumbers[i] > 0) ){
+        if(positiveNumbers[i] > 0 ){
             positiveAmount++
         }else {
             negativeAmount++
         }
+        numbersAmount++
     }
     return positiveAmount
 }
 const positiveNumber = positive(randomNumbers)
-//console.log(positiveNumber)
+//console.log(`O array "randomNumbers" possui ${numbersAmount} números, sendo ${positiveNumber} positivos e ${negativeAmount} negativos.`)
 
 /*
   06
@@ -101,8 +115,20 @@ const positiveNumber = positive(randomNumbers)
     função.
 */
 
-// getOddNumbers([83, 52, 31, 73, 98, 37, 61, 56, 12, 24, 35, 3, 34, 80, 42])
 
+function getOddNumbers (impar = []){
+    let arrayImpar = []
+
+   for(let i=0; i<impar.length; i++){
+    if(impar[i] % 2 !== 0){
+      arrayImpar.push(impar[i])
+    }
+   }
+   return arrayImpar
+}
+const Impares = getOddNumbers([83, 52, 31, 73, 98, 37, 61, 56, 12, 24, 35, 3, 34, 80, 42])
+//console.log(Impares)
+ 
 /*
   07
 
@@ -139,3 +165,12 @@ const functions = [
   function () { return 'Índias' },
   function () { return 'Ocidentais.' }
 ]
+
+let sentence = ''
+
+for(let i=0; i<functions.length; i++){
+  const string = `${functions[i]()} `
+  sentence += string
+}
+
+//console.log(sentence)
