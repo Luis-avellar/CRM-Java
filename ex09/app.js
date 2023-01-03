@@ -13,12 +13,12 @@
     valor no console.
 */
 
-/*function convertToString (value) {
-    return String(value)
-  }*/
-  /*const convertToString = value => {
-    return String(value)
-  }*/
+    /*function convertToString (value) {
+        return String(value)
+      }*/
+      /*const convertToString = value => {
+        return String(value)
+      }*/
 
   /*
     02
@@ -27,10 +27,13 @@
       recebida por parâmetro possui.
   */
   
-      const returnToString = value => {
-        return String(value)
+      /*const returnToString = callString => {
+        callString(newString.length)
       }
       const newString = 'Amor'
+      const resultString  = returnToString((stringCall) => {
+        console.log(stringCall)
+      })*/
   /*
     03
   
@@ -40,6 +43,14 @@
   
     "CHOCOTONE E OVO DE PÁSCOA JUNTOS NO MERCADO EM PLENO FEVEREIRO"
   */
+    /*const lowString = lowerString => {
+      const sentence = 'CHOCOTONE E OVO DE PÁSCOA JUNTOS NO MERCADO EM PLENO FEVEREIRO'
+
+      lowerString(sentence.toLowerCase())
+    }
+      lowString((newLowString) => {
+        console.log(newLowString)
+      })*/
   
   /*
     04
@@ -47,7 +58,14 @@
     - Crie uma função que recebe 2 parâmetros: um caractere e uma string;
     - Ao ser invocada, a função deve retornar o index do caractere na string.
   */
-  
+    /*const twoParam = (char, stringChar) => {
+      return stringChar.indexOf(char)
+    }
+    const oneChar = 'A'
+    const cadeiaChar = 'Amor'
+    const param = twoParam(oneChar, cadeiaChar)
+
+    console.log(param)*/
   /*
     05
   
@@ -55,13 +73,26 @@
       passado por argumento existe no array (também passado por argumento).
   */
   
+      /*const topCars = selectCar => {
+    return selectCar.includes('BMW')
+    }
+  
+    const cars = ['Ferrari', 'Mercedes', 'BMW', 'Porsche']
+  
+    console.log(topCars(cars))*/
   /*
     06
   
     - Crie uma função que retorna a concatenação de 2 arrays, passados como  
       argumentos em sua invocação;
   */
-  
+      /*const myFavoriteCharecter = (hero, warrior) => {
+        const favorites = hero.concat(warrior)
+        return favorites
+      }
+      const myHeroAcademia = ['All might', 'Dynamight', 'Lemillion', 'Deku']
+      const dragonBallZ = ['Vegeta', 'Broly', 'Gohan']
+      console.log(myFavoriteCharecter(myHeroAcademia, dragonBallZ))*/
   /*
     07
   
@@ -69,6 +100,12 @@
       mas com o último item removido.
   */
   
+      /*const lastItemRemove = guns => {
+        guns.pop()
+        return guns
+      }
+      const gun = ['Ak-47','Desert Eagle', 'AWP']
+      console.log(lastItemRemove(gun))*/
   /*
     08
   
@@ -76,6 +113,15 @@
       invocação é null.
   */
   
+      /*const verificador = value => {
+        if(value === null){
+          return value = 'O valor informado é do tipo null'
+        }else {
+          return value = 'Não é null'
+        }
+      }
+      const tipo = null
+      console.log(verificador(tipo))*/ 
   /*
     09
   
@@ -87,6 +133,18 @@
       foi exibido.
   */
   
+      /*const myFunc = callback => { 
+
+        callback()
+      }
+      const myName = nameScreen => {
+        const firstName = 'Luis'
+        console.log(firstName)
+      }
+      
+      myFunc((nameSlot) => {
+        myName()
+      })*/
   /*
     10
   
@@ -98,6 +156,17 @@
       resulte no triplo de 33.
   */
   
+      /*const called = callback => {
+        callback()
+      }
+      const triple = value => {
+        return value * 3
+      }
+      const numero = 33
+      triple(numero)
+      console.log(called((slot) => {
+        triple()
+      }))*/
   /*
     11
   
@@ -107,7 +176,10 @@
     "O Xº item do array [X, X, X] é X."
   */
   
-  const numbers = [1, 2, 3]
+  /*const numbers = [1, 2, 3]
+  numbers.forEach((index, slot, array) => {
+    console.log(`O ${slot}º item do array [${array}] é ${index}.`)
+  })*/
   
   /*
     12
@@ -120,9 +192,15 @@
   const letters = ['v', 'e', 'p']
   let lettersCopy = []
   
-  for (let i = 0; i < letters.length; i++) {
+  /*for (let i = 0; i < letters.length; i++) {
     lettersCopy.push(letters[i])
-  }
+  }*/
+
+  /*letters.forEach((slot) => {
+    lettersCopy.push(slot)
+  })
+  console.log(lettersCopy)*/
+
   
   /*
     13
@@ -151,7 +229,7 @@
     'Recomendo esse livro pra quem curte uma boa história de ficção. Apesar de muita gente pensar que o livro não tem graça, porque o legal mesmo é ver o dinossauro no filme, com todos os efeitos especiais, eu digo pra deixar esse pensamento de lado, pois a história é tão bem contada e os detalhes são tão bem relatados, que você passa a fazer parte da história, e vive todas as emoções hahaha.'
   ]
   
-  let paragraphs = ''
+  let paragraphs = `<p>${review[0]}</p> <p>${review[1]}</p> <p>${review[2]}</p> <p>${review[3]}</p>`
   
   section.innerHTML = paragraphs
   
@@ -176,3 +254,19 @@
       pessoas já mencionadas no início da mensagem).
   */
   
+      /*const quanT = socialMedia => {
+        if(socialMedia.length === 0){
+          return  'Ninguém curtiu sua foto!'
+        }else if(socialMedia.length === 1){
+          return `${socialMedia} curtiu sua foto.`
+        }else if(socialMedia.length === 2){
+          return `${socialMedia[0]} e ${socialMedia[1]} curtiram sua foto!`
+        }else if(socialMedia.length === 3){
+          return `${socialMedia[0]}, ${socialMedia[1]} e ${socialMedia[2]} curtiram sua foto!`
+        } else if(socialMedia.length >= 4){
+          return `${socialMedia[0]}, ${socialMedia[1]} e ${socialMedia.length - 2} curtiram sua foto!`
+        }
+      }
+      const faceBook = ['Carlos']
+
+      console.log(quanT(faceBook))*/
