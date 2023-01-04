@@ -16,9 +16,8 @@
     /*function convertToString (value) {
         return String(value)
       }*/
-      /*const convertToString = value => {
-        return String(value)
-      }*/
+      /*const convertToString = value => return String(value) CORRETO!
+      */
 
   /*
     02
@@ -33,7 +32,7 @@
       const newString = 'Amor'
       const resultString  = returnToString((stringCall) => {
         console.log(stringCall)
-      })*/
+      }) CORRETO! */
   /*
     03
   
@@ -50,7 +49,7 @@
     }
       lowString((newLowString) => {
         console.log(newLowString)
-      })*/
+      }) CORRETO*/
   
   /*
     04
@@ -65,7 +64,7 @@
     const cadeiaChar = 'Amor'
     const param = twoParam(oneChar, cadeiaChar)
 
-    console.log(param)*/
+    console.log(param)* CORRETO/
   /*
     05
   
@@ -92,7 +91,7 @@
       }
       const myHeroAcademia = ['All might', 'Dynamight', 'Lemillion', 'Deku']
       const dragonBallZ = ['Vegeta', 'Broly', 'Gohan']
-      console.log(myFavoriteCharecter(myHeroAcademia, dragonBallZ))*/
+      console.log(myFavoriteCharecter(myHeroAcademia, dragonBallZ)) correto*/
   /*
     07
   
@@ -105,7 +104,7 @@
         return guns
       }
       const gun = ['Ak-47','Desert Eagle', 'AWP']
-      console.log(lastItemRemove(gun))*/
+      console.log(lastItemRemove(gun)) CORRETO*/
   /*
     08
   
@@ -121,7 +120,7 @@
         }
       }
       const tipo = null
-      console.log(verificador(tipo))*/ 
+      console.log(verificador(tipo))*/  
   /*
     09
   
@@ -179,7 +178,7 @@
   /*const numbers = [1, 2, 3]
   numbers.forEach((index, slot, array) => {
     console.log(`O ${slot}º item do array [${array}] é ${index}.`)
-  })*/
+  }) CORRETO*/
   
   /*
     12
@@ -199,7 +198,7 @@
   /*letters.forEach((slot) => {
     lettersCopy.push(slot)
   })
-  console.log(lettersCopy)*/
+  console.log(lettersCopy) CORRETO*/
 
   
   /*
@@ -264,9 +263,23 @@
         }else if(socialMedia.length === 3){
           return `${socialMedia[0]}, ${socialMedia[1]} e ${socialMedia[2]} curtiram sua foto!`
         } else if(socialMedia.length >= 4){
-          return `${socialMedia[0]}, ${socialMedia[1]} e ${socialMedia.length - 2} curtiram sua foto!`
+          return `${socialMedia[0]}, ${socialMedia[1]} e outros ${socialMedia.length - 2} curtiram sua foto!`
         }
       }
+        const qualQ = (mediaSocial = []) => {
+          switch(mediaSocial.length) {
+            case 0:
+              return 'Ninguém curtiu isso'
+            case 1:
+              return `${mediaSocial[0]} curtiu isso`
+            case 2:
+              return `${mediaSocial[0]} e ${mediaSocial[1]} curtiram isso `
+            case 3:
+              return `${mediaSocial[0]}, ${mediaSocial[1]} e ${mediaSocial[2]} curtiram isso`
+            default:
+              return `${mediaSocial[0]}, ${mediaSocial[1]} e outros ${mediaSocial.length - 2} curtiram isso!`
+          }
+        }
       const faceBook = ['Carlos']
 
       console.log(quanT(faceBook))*/
