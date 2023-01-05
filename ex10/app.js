@@ -44,10 +44,10 @@ const cat = {
     adicionado.
 */
     const novoAmigo = (novo) => {
-     cat.bestFriends.push('Bola de pelos')
-     return cat.bestFriends
+     cat.bestFriends.push(novo)
     }
-    // console.log(novoAmigo(cat.bestFriends))
+    novoAmigo('Bola de pelos')
+    // console.log(cat.bestFriends)
     
     
 /*
@@ -58,11 +58,11 @@ const cat = {
   - Exiba a nova cor do gato no console, também utilizando a sintaxe de  
     colchetes.
 */
-    const newColor = function (colorNew) {
-      cat['color'] = 'Marrom'
-      return cat['color']
+    const newColor = colorNew =>  {
+      colorNew['color'] += ` e Marrom`
     }
-    // console.log(newColor(cat['color']))
+    newColor(cat)
+    // console.log(cat['color'])
 /*
   06
 
@@ -72,8 +72,12 @@ const cat = {
 */
     const check = function (value = {})  {
       return value === {}
-    }
+    } //ERRADO
     //console.log(check(cat))
+
+    const isObject = value => typeof value === 'object'
+
+    // console.log(isObject(cat)) RESPOSTA CORRETA
 /*
   07
 
@@ -92,10 +96,9 @@ const cat = {
         return 'latiado de cachorro'
       }
     }
-    const mensagemNaTela = () => {
-      return `A soma das idades de ${cat.nome} e ${dog.nome} é ${cat.age + dog.age}`
-    }
-    //console.log(mensagemNaTela())
+    const mensagemNaTela = (cat, dog) =>  `A soma das idades de ${cat.nome} e ${dog.nome} é ${cat.age + dog.age}`
+    const showMessage = mensagemNaTela(cat, dog)
+    //console.log(showMessage)
 /*
   08
 
@@ -139,15 +142,8 @@ const isAnSUV = car => {
         undefined: 'Representa um valor não-setado.',
         object: 'Arrays, Datas, Objetos literais, Funções, etc.'
       }
-
-      if(type === null){
-        return oneObject.null
-      }else if(type === undefined){
-        return oneObject.undefined
-      }else if(type === Object){
-        return oneObject.object
-      }else {
-        return 'O type possui valor diferente.'
-      }
+      return oneObject[type]
     }
-    // console.log(novoType())
+    // console.log(novoType('null'))
+    // console.log(novoType('undefined'))
+    // console.log(novoType('object')) EXERCICIO CORRIGIDO
