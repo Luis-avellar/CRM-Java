@@ -28,10 +28,10 @@ const best2019Movies = [
   ]
   
   let melhor=''
-  best2019Movies.forEach( x =>  melhor+=`
-   -${x.title} , dirigido por ${x.directedBy}`)
+  best2019Movies.forEach( x =>  melhor+=`-${x.title} , dirigido por ${x.directedBy}\n`)
+  //console.log(melhor)
   
-  //console.log(` Segundo o site Omelete, os melhores filmes de 2019 são: ${melhor.slice(0, 37)} ${melhor.slice(38, 90)} ${melhor.slice(90, 136)}`)
+  
   /*
     02
   
@@ -79,7 +79,7 @@ const best2019Movies = [
   
     - Exiba o valor do PI no console.
   */
-  
+  //console.log(Math.PI)
   
   
   /*
@@ -90,6 +90,7 @@ const best2019Movies = [
   */
   
   const firstNumber = 8.3
+  //console.log(Math.ceil(firstNumber))
   
   /*
     05
@@ -99,6 +100,7 @@ const best2019Movies = [
   */
   
   const secondNumber = 3.5
+  //console.log(Math.round(secondNumber))
   
   /*
     06
@@ -108,6 +110,7 @@ const best2019Movies = [
   */
   
   const thirdNumber = 8.9
+  //console.log(Math.floor(thirdNumber))
   
   /*
     07
@@ -116,6 +119,7 @@ const best2019Movies = [
   */
   
   const fourthNumber = 5.5
+  //console.log(Math.trunc(fourthNumber))
   
   /*
     08
@@ -123,4 +127,6 @@ const best2019Movies = [
     - A cada vez que o index.html for carregado, exiba no console um número  
       aleatório de 0 à 10, incluindo 0 e 10.
   */
+ const randomNumber = Math.random()
+ //console.log(Math.round(randomNumber * 10))
   
